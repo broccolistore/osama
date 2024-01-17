@@ -1,0 +1,142 @@
+/* SECTION MAIN STYLE START */
+.section-main {
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-column: 1/11;
+    grid-row: 2/3;
+    /* gap: 20px; */
+}
+/* SECTION  MAIN STYLE END */
+
+/* All SECTIONS IN THE PAGE START*/
+
+/* COUNT-1-TITLE START */
+.count-1-title {
+    grid-column: span 10;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    background-image: url(../images/محكمه.jfif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.count-1-title .count-1-img-p {
+    background-color: rgba(0, 0, 0, 0.493);
+    width: 90vw;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: auto auto;
+    border-radius: 20px;
+}
+
+.count-1-title .count-1-img-p h2, p {
+    color: var(--fontColor);
+}
+
+.count-1-title .count-1-img-p h2 {
+    grid-column: span 10;
+    grid-row: 1/2;
+    text-align: center;
+    margin-top: 15%;
+    font-size: 1.5vw;
+}
+
+.count-1-title .count-1-img-p p {
+    grid-column: 1/span 5;
+    grid-row: 2/3;
+    width: 90%;
+    padding: 10%;
+    font-size: 1.5vw;
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+.count-1-title .count-1-img-p img {
+    grid-column: 5/span 5;
+    width: 40vw;
+    padding: 10%;
+    grid-row: 2/3;
+    border-radius: 100px;
+}
+
+
+/* COUNT-1-TITLE START */
+
+
+/* COUNT-2-CARDS START */
+.count-2-cards {
+    grid-column: span 10;
+    grid-row: 2/span 1;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: 30px auto;
+    /* gap: 10%; */
+    /* justify-content: space-evenly; */
+    padding: 15vw;
+    background-image: url(../images/مطرقه.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+}
+
+.card {
+    margin: 10%;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.568);
+    border-radius: 15px;
+}
+
+.card img {
+    width: 18vw;
+    height: 70%;
+    border-radius: 20px;
+}
+
+.count-2-cards h2 {
+    grid-column: 1/10;
+    text-align: center;
+    color: var(--fontColor);
+}
+
+.count-2-cards h3 {
+    text-align: center;
+    color: var(--fontColor);
+    margin: 5%;
+    /* border-bottom: 5px solid black; */
+}
+
+
+.count-2-cards .card-1 {
+    grid-column: span 3;
+}
+
+.count-2-cards .card-2 {
+    grid-column: span 3;
+}
+
+.count-2-cards .card-3 {
+    grid-column: span 3;
+}
+
+/* COUNT-2-CARDS END */
+
+
+
+
+.count-4-social {
+    grid-column: span 10;
+    grid-row: 4/5;
+}
+/* All SECTIONS IN THE PAGE END*/
+

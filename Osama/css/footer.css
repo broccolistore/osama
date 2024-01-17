@@ -1,0 +1,13 @@
+/* FOOTER SECTION START */
+footer {
+    grid-column: 1/11;
+    grid-row: 4/5;
+    background-color: black;
+    color: var(--fontColor);
+    height: 20vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* FOOTER SECTION END */

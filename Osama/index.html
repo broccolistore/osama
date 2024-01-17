@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/section-main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/form-style.css">
+    <link rel="stylesheet" href="css/social-style.css">
+    <title>أسامه حامد</title>
+
+</head>
+
+<body>
+    <div class="main">
+        <!-- HEADER SECTION START -->
+        <header>
+            <h1><a href="#">اسامه حامد</a></h1>
+            <nav>
+                <a href="#contact">تواصل معنا</a>
+                <a href="#">الرئيسيه</a>
+                <a href="#proj">مشاريع</a>
+            </nav>
+        </header>
+        <!-- HEADER SECTION END -->
+
+        <!-- SECTION MAIN START -->
+        <section class="section-main">
+            <!-- COUNT-ONE START -->
+            <section class="count-1-title count">
+                <div class="count-1-img-p">
+                    <h2>مرحبا بكم في مكتب المحاماه .</h2>
+                <p>موقع المحامي المميز هو موقع يوفر خدمات قانونية متميزة ومختصة في مجالات معينة، مثل القانون الجنائي أو
+                    القانون التجاري أو القانون العقاري وغيرها. يتميز الموقع بتصميم فريد واحترافي يعطي الزائرين شعوراً
+                    بالثقة والعلمانية في الخدمات المُقدمة، كما يتضمن معلومات وأدوات قيمة للاستشارة والتوجيه القانوني.
+                    كما يوفر الموقع خدمة تواصل سهلة وسريعة مع المحامين المختصين لتقديم المشورة القانونية والمساعدة في حل
+                    المشاكل القانونية.</p>
+                <img src="images/os4.jpeg" alt="your browser is not supported this image.">
+            </div>
+            </section>
+            <!-- COUNT-ONE END -->
+
+            <!-- COUNT-TWO START -->
+            <section class="count-2-cards count" id="proj">
+                <h2>يمكننا العمل علي التالي </h2>
+                <div class="card-1 card">
+                    <h3>جنائي</h3>
+                    <img src="images/قضايا-جنايات.jpg" alt="">
+                </div>
+
+                <div class="card-2 card">
+                    <h3>سياسه</h3>
+                    <img src="images/قضايا-سياسيه.jpg" alt="">
+                </div>
+
+                <div class="card-3 card">
+                    <h3> محكمه </h3>
+                    <img src="images/محكمه الأسره.jpg" alt="">
+                </div>
+            </section>
+            <!-- COUNT-TWO END -->
+
+            <!-- COUNT-THREE START -->
+            <section class="count-3-form count">
+                <!-- <h2>ابعت بياناتك للتواصل معك.</h2> -->
+                <div class="box">
+                    <div class="form">
+                        <h2>ابعتلنا بياناتك</h2>
+                        <form>
+                            <div class="inputbox">
+                                <input type="text" value="" id="username" required placeholder="ادخل اسمك هنا...">
+                                <span>الأسم</span>
+                            </div>
+                            <div class="inputbox">
+                                <input type="email" value="" id="email" required placeholder="اكتب عنوان بريدك الالكتروني هنا...">
+                                <span>البريد الالكتروني</span>
+                            </div>
+                            <div class="inputbox">
+                                <input type="text" value="" id="phone" required placeholder="اكتب رقم تليفونك هنا...">
+                                <span>رقم الهاتف</span>
+                            </div>
+                            <div class="inputbox">
+                                <input type="text" value="" id="subject" required placeholder="اكتب اي ملاحظه عايزنا نشوفها   ...">
+                                <span>ملاحظه</span>
+                            </div>
+                            <input type="submit" value="ارسال" class="sub" id="submit">
+                        </form>
+                    </div>
+                </div>
+                <script type="module">
+
+                    // Import the functions you need from the SDKs you need
+                    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+                    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+                    // TODO: Add SDKs for Firebase products that you want to use
+                    // https://firebase.google.com/docs/web/setup#available-libraries
+
+                    // Your web app's Firebase configuration
+                    const firebaseConfig = {
+                        apiKey: "AIzaSyADBdjYo_VmHaDpYqerWvmhTFaTnHEGiDw",
+                        authDomain: "osos-8cf3d.firebaseapp.com",
+                        projectId: "osos-8cf3d",
+                        storageBucket: "osos-8cf3d.appspot.com",
+                        messagingSenderId: "732801318499",
+                        appId: "1:732801318499:web:40f06bff31b48a2b320256"
+                    };
+
+                    // Initialize Firebase
+                    const app = initializeApp(firebaseConfig);
+
+                    //get ref to database services
+                    const db = getDatabase(app);
+
+                    document.getElementById("submit").addEventListener('click', function (e) {
+                        e.preventDefault();
+                        set(ref(db, 'All-users/' + document.getElementById("username").value),
+                            {
+                                username: document.getElementById("username").value,
+                                email: document.getElementById("email").value,
+                                PhoneNumber: document.getElementById("phone").value,
+                                subject: document.getElementById("subject").value,
+                            });
+                        alert("  تم ارسال البيانات  سوف اتواصل معكم في اقرب وقت  شكرا لكم!");
+                    })
+                </script>
+            </section>
+            <!-- COUNT-THREE END -->
+
+            <!-- COUNT-FOUR START -->
+            <section class="count-4-social count">
+                <h2>تواصل معنا عبر.</h2>
+                <div class="icone-social">
+                    <ul class="icone-ul">
+                        <li><a href="https://www.facebook.com/profile.php?id=100083012628267&mibextid=ZbWKwL"
+                                target="_blank"><img src="icones/facebook.png" alt="" width="50"></a></li>
+                        <li><a href="https://wa.me/+201097149385" target="_blank"><img src="icones/whatsapp.png" alt=""
+                                    width="50"></a></li>
+                        <li><a href="mailto:Osamahamedlawyer@gmail.com"><img src="icones/gmail.png" alt=""
+                                    width="50"></a></li>
+                        <li><a href="tel:+201097149385"><img src="icones/phone.png" alt="" width="50"></a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- COUNT-FOUR END -->
+        </section>
+        <!-- SECTION MAIN END -->
+        <footer>
+            <div>
+                Made By: Mahmoud Hamed &copy; 2024<br>
+                phone: 01030403068
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
